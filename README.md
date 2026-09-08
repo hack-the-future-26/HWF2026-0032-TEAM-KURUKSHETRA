@@ -41,3 +41,4 @@ The Firebase HTTP function exposes `/auth/register`, `/auth/login`, `/auth/logou
 The previous Django `backend/` directory is retained only as an un-deployed migration reference until the production rollout has been verified. It has no Firebase/Vercel deployment configuration.
 # govverify-platform
 # govverify-platform
+# govverify-platform
