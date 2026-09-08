@@ -1,0 +1,1 @@
+{"name":"gem-verify-functions","private":true,"main":"index.js","engines":{"node":"22"},"scripts":{"lint":"node --check index.js"},"dependencies":{"@supabase/supabase-js":"^2.115.0","busboy":"^1.6.0","express":"^5.1.0","firebase-admin":"^13.0.0","firebase-functions":"^6.0.0"}}

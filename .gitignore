@@ -1,0 +1,13 @@
+node_modules/
+functions/node_modules/
+.next/
+.env
+.env.local
+.vercel/
+coverage/
+*.log
+backend/.env
+backend/db.sqlite3
+backend/staticfiles/
+
+.vercel

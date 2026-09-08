@@ -1,0 +1,1 @@
+import Link from "next/link"; export default function NewBid(){return <main className="prose"><Link href="/dashboard">← Dashboard</Link><h1>Add a bid</h1><p>Bid ingestion will save tender and bidder records after the project environment is connected.</p></main>}
