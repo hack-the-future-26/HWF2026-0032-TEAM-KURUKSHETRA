@@ -37,7 +37,7 @@ Never put service-account credentials, Admin SDK keys, government API credential
 
 ## API compatibility
 
-The Firebase HTTP function exposes `/auth/register`, `/auth/login`, `/auth/logout`, `/auth/me`, `/officers`, `/officers/invite`, `/verification`, `/verification/{id}`, `/verification/{id}/upload`, and `/settings`. It intentionally has no Django CSRF endpoint because Firebase bearer-token authentication replaces session cookies and CSRF tokens.
+Supabase Auth issues the browser session and access token. The API runtime verifies that token with Supabase before exposing `/auth/login`, `/auth/logout`, `/auth/me`, `/officers`, `/officers/invite`, `/verification`, `/verification/{id}`, `/verification/{id}/upload`, and `/settings`. It intentionally has no Django CSRF endpoint because it uses bearer-token authentication rather than Django session cookies.
 
 The previous Django `backend/` directory is retained only as an un-deployed migration reference until the production rollout has been verified. It has no Firebase/Vercel deployment configuration.
 # govverify-platform
