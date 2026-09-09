@@ -1,0 +1,1 @@
+import Link from "next/link"; export default function Reset(){return <main className="auth"><Link href="/">← GeM Verify</Link><form><p className="eyebrow">ACCOUNT RECOVERY</p><h1>Reset password</h1><label>Work email<input type="email" required/></label><button>Send reset link</button><p>Supabase sends the recovery email when configured.</p></form></main>}

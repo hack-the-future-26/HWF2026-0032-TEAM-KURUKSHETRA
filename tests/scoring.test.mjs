@@ -1,0 +1,3 @@
+import test from "node:test"; import assert from "node:assert/strict"; import { calculateCompliance } from "../lib/scoring.ts";
+test("any statutory gate failure is critical",()=>assert.deepEqual(calculateCompliance({panValid:true,debarred:true,landBorderCleared:true,udinValid:true,statutory:100,technical:100,financial:100,localContent:100,penalty:0}),{eligible:false,score:0,tier:"T4"}));
+test("weighted score is tiered",()=>assert.equal(calculateCompliance({panValid:true,debarred:false,landBorderCleared:true,udinValid:true,statutory:95,technical:90,financial:92,localContent:88,penalty:2}).tier,"T1"));
