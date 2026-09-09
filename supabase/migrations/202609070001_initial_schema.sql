@@ -94,3 +94,6 @@ begin
   update public.officer_invitations set status='ACCEPTED',accepted_by=p_uid,accepted_at=now() where id=p_invitation_id;
   insert into public.audit_logs(user_uid,user_email,action,resource,status,metadata) values(p_uid,p_email,'OFFICER_REGISTERED','OFFICER','success','{}');
 end $$;
+
+revoke all on function public.accept_officer_invitation(uuid,text,citext) from public;
+grant execute on function public.accept_officer_invitation(uuid,text,citext) to service_role;
